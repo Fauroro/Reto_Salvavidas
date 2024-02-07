@@ -21,6 +21,7 @@ body{
     grid-row: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .nav{
     grid-row: 2;
@@ -37,10 +38,13 @@ body{
 #menu, #profile, #elements, #forms{
     display: none;
 }
+label{
+    cursor: pointer;
+}
 .menuProfile{
     background-color: #fff;
     position: absolute;
-    right: 2%;
+    right: 25px;
     top: 30px;
     width: 80px;
     display: none;
@@ -78,7 +82,7 @@ main{
 #elements:checked ~ .subMenu{
     display: block;
 }
-#elements:checked ~ .mostrarForms p{
+#elements:checked ~ .mostrarElements p{
     background-color: rgb(61, 121, 212);
 }
 #forms:checked ~ .subMenuForms{
@@ -86,4 +90,7 @@ main{
 }
 #forms:checked ~ .mostrarForms p{
     background-color: rgb(61, 121, 212);
+}
+#mostrarMenu:checked ~ .nav{
+    transform: scale(0)
 }
