@@ -7,58 +7,53 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
-<body>
-    <header class="header">
-        <input type="checkbox" id="menu">
-        <label for="menu" class="mostrarMenu" style="font-size: 25px;">&#8801</label>
-        <input type="checkbox" id="profile">
-        <label for="profile" class="mostrarOpc">
-            <img src="images/avatar.jpg" alt="avatar.png" class="avatar">
-        </label>
-        <div class="menuProfile">
-            <a href="">Profile</a>
-            <a href="">Settings</a>
-            <a href="">Logout</a>
-        </div>
-    </header>
+<body class="body">
+    <input type="checkbox" id="menu">
+    <label for="menu" class="mostrarMenu" style="font-size: 25px;">&#8801</label>
+    <input type="checkbox" id="profile">
+    <label for="profile" class="mostrarOpc">
+        <img src="images/avatar.jpg" alt="avatar.png" class="avatar">
+    </label>
+    <div class="menuProfile">
+        <a href="">Profile</a>
+        <a href="">Settings</a>
+        <a href="">Logout</a>
+    </div>
     <nav class="nav">
+        <div class="logo">
+            <i class="bx bx-happy"></i>
+                <h2> AdminSite </h2>
+        </div>
         <p>MAIN</p>
-        <a href="">Dashboard</a>
-        <div>
-            <input type="checkbox" id="elements">
-            <label for="elements" class="mostrarElements">
-                <p>Elements</p>
-            </label>
-            <div class="subMenu">
-                <a href="">Alerts</a>
-                <a href="">Badgets</a>
-                <a href="">Breadcrumbs</a>
-                <a href=""> Button</a>
-            </div>
+        <input type="checkbox" id="elements">
+        <a href="">Dashboard</a>       
+        <label for="elements" class="mostrarElements">
+            <p>Elements</p>
+        </label>
+        <div class="subMenu">
+            <a href="">Alerts</a>
+            <a href="">Badgets</a>
+            <a href="">Breadcrumbs</a>
+            <a href=""> Button</a>
         </div>
         <a href="">Charts</a>
         <a href="">Widgets</a>
         <p>TABLE AND FORMS</p>
         <a href="">Tables</a>
-        <div>
-            <input type="checkbox" id="forms">
-            <label for="forms" class="mostrarForms">
-                <p>Forms</p>
-            </label>
-            <div class="subMenuForms">
-                <a href="">Basic</a>
-                <a href="">Select</a>
-                <a href="">Checkbox</a>
-                <a href=""> Radio</a>
-            </div>
-        </div>
-    </nav>
-    <div class="logo">
-        <i class="bx bx-happy"></i>
-        <h2>AdminSite</h2>
-    </div>
 
-    
+        <input type="checkbox" id="forms">
+        <label for="forms" class="mostrarForms">
+            <p>Forms</p>
+        </label>
+        <div class="subMenuForms">
+            <a href="">Basic</a>
+            <a href="">Select</a>
+            <a href="">Checkbox</a>
+            <a href=""> Radio</a>
+        </div>
+
+    </nav>
+
     <main>
         <h1>Dashboard</h1><br></br>
         <p><span>Home</span>/ Dashboard</p><br><br>
@@ -67,21 +62,27 @@
             <div class="item item1">
                 <h2>1500</h2>
                 <p>Traffic</p>
-
+                <progress id="file" max="100" value="40"></progress>
+                <p>40%</p>
+                
             </div>
             <div class="item item2">
                 <h2>234</h2>
                 <p>Sales</p>
-
+                <progress id="file" max="100" value="60"></progress>
+                <p>60%</p>
             </div>
             <div class="item item3">
                 <h2>465</h2>
                 <p>Pageviews</p>
-
+                <progress id="file" max="100" value="80"></progress>
+                <p>80%</p>
             </div>
             <div class="item item4">
                 <h2>235</h2>
                 <p>Visitors</p>
+                <progress id="file" max="100" value="30"></progress>
+                <p>30%</p>
             </div>
             <div class="item item5">
                 <h3>Sales Report</h3><br>

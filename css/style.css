@@ -1,31 +1,29 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;
 }
 body{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 50px 20px 2fr 40px;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    grid-column: 2;
-    align-items: center;
-    padding: 5px;
+
+label.mostrarOpc{
+    grid-column: 4;
 }
 .logo{
-    grid-column: 1;
-    grid-row: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .nav{
-    grid-row: 2;
+    grid-row: 1 / span 2;
     grid-column: 1;
+    text-align: center;
+    transition: 0.8s ease-in-out;
 }
 .nav a{
     display: block;
@@ -37,6 +35,7 @@ body{
 
 #menu, #profile, #elements, #forms{
     display: none;
+    z-index: 100;
 }
 label{
     cursor: pointer;
@@ -66,11 +65,12 @@ main{
     height: 100vh;
     background-color: rgb(236, 236, 236);
     padding: 10px;
+    grid-column: 2 / span 4;
 }
 .item{
     background-color: #fff;
     padding: 10px;
-    border-radius: 5%;
+    border-radius: 10px;
     box-shadow: 1px 1px 8px lightgray;
 }
 .item5{
@@ -84,6 +84,12 @@ main{
 }
 #elements:checked ~ .mostrarElements p{
     background-color: rgb(61, 121, 212);
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    padding: 3px;
+    align-content: center;
+    text-align: center;
 }
 #forms:checked ~ .subMenuForms{
     display: block;
@@ -91,6 +97,9 @@ main{
 #forms:checked ~ .mostrarForms p{
     background-color: rgb(61, 121, 212);
 }
-#mostrarMenu:checked ~ .nav{
-    transform: scale(0)
+.body:has(#menu:checked){
+    grid-template-columns: 1fr 20px 2fr 40px;
+}
+#menu:not(:checked) ~ .nav .logo h2{
+    display: none;
 }
